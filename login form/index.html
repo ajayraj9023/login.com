@@ -1,0 +1,69 @@
+﻿<html>
+<head>
+    <title>Login Form</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="bg-image">
+        <div class="content">
+           <header>Login Form</header>
+                <form action="#">
+
+                    <div class="field ">
+                        <span  class="fa fa-user"></span>
+                        <input type="text" required placeholder="Email or Phone" />
+                    </div>
+
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" class="password" required placeholder="Password" />
+                        <span class="show">SHOW</span>
+                    </div>
+
+                    <div class="pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <div class="field">
+                       <input type="submit" value="LOGIN" />
+                    </div> 
+
+                    <div class="login">or login with</div>
+                    <div class="link">
+                        <div class="facebook">
+                            <i class="fa fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </div>
+
+                        <div class="instagram">
+                            <i class="fa fa-instagram"></i>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
+                    <div class="sign-up">Don't have account?
+                        <a href="#">Sign-up now</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    <script>
+        const pass_field = document.querySelector('.password');
+        const show_btn = document.querySelector('.show');
+        show_btn.addEventListener('click', function(){
+            if (pass_field.type === "password") {
+                pass_field.type = "text";
+                pass_field.style.color = "#3498db";
+                show_btn.textContent = "HIDE";
+            } else {
+                pass_field.type = "password";
+                pass_field.style.color = "#222";
+                show_btn.textContent = "SHOW";
+            }
+        });
+    </script>
+  
+</body>
+</html>
